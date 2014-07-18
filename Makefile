@@ -1,7 +1,8 @@
 CC=gcc
 
 five: five.c
-	$(CC) -o five five.c
+	$(CC) -fPIC -c five.c
+	$(CC) -shared -o libfive.so five.o
 
 clean:
-	rm five
+	rm five *.o *.so

@@ -1,6 +1,3 @@
-#include "stdio.h"
-
-int main() {
-  printf("Five\n");
-  return 0;
+int five() {
+  return 5;
 }
