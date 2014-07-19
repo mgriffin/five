@@ -7,3 +7,9 @@ const char * five_roman() {
   roman = "V";
   return roman;
 }
+
+const char * five_morsecode() {
+  char * morsecode;
+  morsecode = "di-di-di-di-dit";
+  return morsecode;
+}
