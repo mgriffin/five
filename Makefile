@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-ansi -pedantic -Wall -g
+CFLAGS=-ansi -pedantic -Wall
 
 libfive: five.c
 	$(CC) $(CFLAGS) -fPIC -c five.c
