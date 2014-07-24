@@ -37,6 +37,12 @@ five_negative(); // -5
 five_loud(); // FIVE
 ```
 
+##### 5 goes multilingual
+```C
+five_english(); // five
+five_irish(); // cúig
+```
+
 ##### Different radices
 ```C
 five_binary(); // 101

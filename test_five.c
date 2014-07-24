@@ -53,6 +53,18 @@ static char * test_five_loud() {
   return 0;
 }
 
+static char * test_five_english() {
+  const char * out = five_english();
+  mu_assert_string("error, five_english != five", strcmp(out, "five"));
+  return 0;
+}
+
+static char * test_five_irish() {
+  const char * out = five_irish();
+  mu_assert_string("error, five_irish != cúig", strcmp(out, "cúig"));
+  return 0;
+}
+
 static char * test_five_binary() {
   int out = five_binary();
   mu_assert("error, five_binary != 101", out == 101);
@@ -80,6 +92,8 @@ static char * all_tests() {
   mu_run_test(test_five_morsecode);
   mu_run_test(test_five_negative);
   mu_run_test(test_five_loud);
+  mu_run_test(test_five_english);
+  mu_run_test(test_five_irish);
   mu_run_test(test_five_binary);
   mu_run_test(test_five_octal);
   mu_run_test(test_five_hex);
