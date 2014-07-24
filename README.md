@@ -31,8 +31,9 @@ five() / five(); // 1
 
 ##### Different sorts of 5
 ```C
-five_roman() // V
-five_morseCode() // di-di-di-di-dit
+five_roman(); // V
+five_morseCode(); // di-di-di-di-dit
+five_negative(); // -5
 ```
 
 ##### Different radices

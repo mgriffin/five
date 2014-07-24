@@ -41,6 +41,12 @@ static char * test_five_morsecode() {
   return 0;
 }
 
+static char * test_five_negative() {
+  int out = five_negative();
+  mu_assert("error, five_negative != -5", out == -5);
+  return 0;
+}
+
 static char * test_five_binary() {
   int out = five_binary();
   mu_assert("error, five_binary != 101", out == 101);
@@ -66,6 +72,7 @@ static char * all_tests() {
   mu_run_test(test_divide_five);
   mu_run_test(test_five_roman);
   mu_run_test(test_five_morsecode);
+  mu_run_test(test_five_negative);
   mu_run_test(test_five_binary);
   mu_run_test(test_five_octal);
   mu_run_test(test_five_hex);

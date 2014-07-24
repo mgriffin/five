@@ -25,3 +25,7 @@ int five_octal() {
 int five_hex() {
   return five();
 }
+
+int five_negative() {
+  return -5;
+}
