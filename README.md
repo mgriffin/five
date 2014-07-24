@@ -34,6 +34,7 @@ five() / five(); // 1
 five_roman(); // V
 five_morseCode(); // di-di-di-di-dit
 five_negative(); // -5
+five_loud(); // FIVE
 ```
 
 ##### Different radices

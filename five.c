@@ -29,3 +29,9 @@ int five_hex() {
 int five_negative() {
   return -5;
 }
+
+const char * five_loud() {
+  char * loud;
+  loud = "FIVE";
+  return loud;
+}
