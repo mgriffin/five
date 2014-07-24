@@ -13,3 +13,15 @@ const char * five_morsecode() {
   morsecode = "di-di-di-di-dit";
   return morsecode;
 }
+
+int five_binary() {
+  return 101;
+}
+
+int five_octal() {
+  return five();
+}
+
+int five_hex() {
+  return five();
+}
