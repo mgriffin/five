@@ -31,15 +31,15 @@ five() / five(); // 1
 
 ##### Different sorts of 5
 ```C
-five.roman() // V
-five.morseCode() // di-di-di-di-dit
+five_roman() // V
+five_morseCode() // di-di-di-di-dit
 ```
 
 ##### Different radices
 ```C
-five.binary(); // 101
-five.octal(); // 5
-five.hex(); // 5
+five_binary(); // 101
+five_octal(); // 5
+five_hex(); // 5
 ```
 
 ### Tests
