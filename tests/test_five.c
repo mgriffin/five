@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include "minunit.h"
-#include "five.h"
+#include "../minunit.h"
+#include "../five.h"
 
 int tests_run = 0;
 
