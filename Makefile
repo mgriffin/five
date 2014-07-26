@@ -1,12 +1,18 @@
 CC=gcc
 CFLAGS=-pedantic -Wall
 
-libfive: five.c
-	$(CC) $(CFLAGS) -fPIC -c five.c
-	$(CC) $(CFLAGS) -shared -o libfive.so five.o
+SOURCES  := $(wildcard src/*.c)
+INCLUDES := $(wildcard src/*.h)
+OBJECTS  := $(SOURCES:src/%.c=obj/%.o)
 
-test_five: libfive tests/test_five.c
-	$(CC) $(CFLAGS) -o test_five -L. -lfive tests/test_five.c
+lib/libfive.so: $(OBJECTS)
+	$(CC) $(CFLAGS) -shared -o $@ $(OBJECTS)
+
+$(OBJECTS): obj/%.o : src/%.c
+	$(CC) $(CFLAGS) -fPIC -c $< -o $@
+
+test_five: lib/libfive.so tests/test_five.c
+	$(CC) $(CFLAGS) -o test_five -Llib -lfive -Isrc tests/test_five.c
 
 clean:
-	rm test_five *.o *.so
+	rm -f test_five obj/*.o lib/libfive.so
