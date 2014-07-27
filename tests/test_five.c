@@ -71,6 +71,36 @@ static char * test_five_swedish() {
   return 0;
 }
 
+static char * test_five_dutch() {
+  const char * out = five_dutch();
+  mu_assert_string("error, five_dutch != vijf", strcmp(out, "vijf"));
+  return 0;
+}
+
+static char * test_five_french() {
+  const char * out = five_french();
+  mu_assert_string("error, five_french != cinq", strcmp(out, "cinq"));
+  return 0;
+}
+
+static char * test_five_german() {
+  const char * out = five_german();
+  mu_assert_string("error, five_german != fünf", strcmp(out, "fünf"));
+  return 0;
+}
+
+static char * test_five_italian() {
+  const char * out = five_italian();
+  mu_assert_string("error, five_italian != cinque", strcmp(out, "cinque"));
+  return 0;
+}
+
+static char * test_five_spanish() {
+  const char * out = five_spanish();
+  mu_assert_string("error, five_spanish != cinco", strcmp(out, "cinco"));
+  return 0;
+}
+
 static char * test_five_binary() {
   int out = five_binary();
   mu_assert("error, five_binary != 101", out == 101);
@@ -101,6 +131,11 @@ static char * all_tests() {
   mu_run_test(test_five_english);
   mu_run_test(test_five_irish);
   mu_run_test(test_five_swedish);
+  mu_run_test(test_five_dutch);
+  mu_run_test(test_five_french);
+  mu_run_test(test_five_german);
+  mu_run_test(test_five_italian);
+  mu_run_test(test_five_spanish);
   mu_run_test(test_five_binary);
   mu_run_test(test_five_octal);
   mu_run_test(test_five_hex);
