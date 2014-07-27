@@ -8,6 +8,7 @@ int five_negative();
 const char * five_loud();
 const char * five_english();
 const char * five_irish();
+const char * five_swedish();
 int five_binary();
 int five_octal();
 int five_hex();

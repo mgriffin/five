@@ -65,6 +65,12 @@ static char * test_five_irish() {
   return 0;
 }
 
+static char * test_five_swedish() {
+  const char * out = five_swedish();
+  mu_assert_string("error, five_swedish != fem", strcmp(out, "fem"));
+  return 0;
+}
+
 static char * test_five_binary() {
   int out = five_binary();
   mu_assert("error, five_binary != 101", out == 101);
@@ -94,6 +100,7 @@ static char * all_tests() {
   mu_run_test(test_five_loud);
   mu_run_test(test_five_english);
   mu_run_test(test_five_irish);
+  mu_run_test(test_five_swedish);
   mu_run_test(test_five_binary);
   mu_run_test(test_five_octal);
   mu_run_test(test_five_hex);
