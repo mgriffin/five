@@ -58,6 +58,5 @@ five_hex(); // 5
 
 ### Tests
 ```bash
-make test_five
-./test_five
+make tests
 ```

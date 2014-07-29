@@ -11,6 +11,9 @@ lib/libfive.so: $(OBJECTS)
 $(OBJECTS): obj/%.o : src/%.c
 	$(CC) $(CFLAGS) -fPIC -c $< -o $@
 
+tests: test_five
+	@./test_five
+
 test_five: lib/libfive.so tests/test_five.c
 	$(CC) $(CFLAGS) -o test_five -Llib -lfive -Isrc tests/test_five.c
 
