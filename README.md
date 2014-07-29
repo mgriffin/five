@@ -39,8 +39,14 @@ five_loud(); // FIVE
 
 ##### 5 goes multilingual
 ```C
+five_dutch(); // vijf
 five_english(); // five
+five_french(); // cinq
+five_german(); // fünf
 five_irish(); // cúig
+five_italian(); // cinque
+five_spanish(); // cinco
+five_swedish(); // fem
 ```
 
 ##### Different radices
